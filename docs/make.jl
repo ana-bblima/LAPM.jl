@@ -5,6 +5,7 @@ using Documenter
 using PDBTools
 using Plots
 using LAPM
+
 makedocs(
     sitename="LAPM.jl",
     pages=[

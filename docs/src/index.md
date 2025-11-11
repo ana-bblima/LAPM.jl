@@ -5,18 +5,10 @@ import Pkg
 Pkg.add(url="https://github.com/m3g/LAPM.jl")
 ```
 
-Additional packages for the example:
-
-```
-Pkg.add("Plots", "StatsPlots")
-```
-
 # Introduction
 
 ```@example mvalue
 using LAPM
-using Plots
-using StatsPlots
 ```
 
 ```@example mvalue
