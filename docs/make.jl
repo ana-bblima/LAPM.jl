@@ -1,9 +1,10 @@
+push!(LOAD_PATH, "../src/")
 import Pkg
 Pkg.add("Documenter")
 using Documenter
 using PDBTools
 using Plots
-push!(LOAD_PATH, "../src/")
+using LAPM
 makedocs(
     sitename="LAPM.jl",
     pages=[
