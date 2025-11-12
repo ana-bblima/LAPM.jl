@@ -14,6 +14,7 @@ using PDBTools:
 
 export MoeserHorinek, AutonBolen
 export plot_mvalue
+export plot_MH_vs_AB
 
 data_dir = joinpath(@__DIR__, "data")
 
@@ -179,5 +180,104 @@ const mvalues_moeser_horinek = OrderedDict{String,Dict}()
 
 # Input data for examples
 include("./data/load_data.jl")
+
+function plot_MH_vs_AB(cosolvent::String="urea")
+    cosolvent = lowercase(cosolvent)
+    example_structs = keys(sasa_server)
+    nexamples = length(example_structs)
+    tot_mh, bb_mh, sc_mh = zeros(nexamples), zeros(nexamples), zeros(nexamples)
+    tot_ab, bb_ab, sc_ab = zeros(nexamples), zeros(nexamples), zeros(nexamples)
+    for (i, str) in enumerate(example_structs)
+        p_mh = predict_mvalue(str; model=MoeserHorinek, cosolvent)
+        tot_mh[i] = p_mh.tot
+        bb_mh[i] = p_mh.bb
+        sc_mh[i] = p_mh.sc
+        p_ab = predict_mvalue(str; model=AutonBolen, cosolvent)
+        tot_ab[i] = p_ab.tot
+        bb_ab[i] = p_ab.bb
+        sc_ab[i] = p_ab.sc
+    end
+
+    l = @layout [a b c; d; e]
+    plt = plot(layout=l, framestyle=:box)
+    ls=(lw=2, ls=:dash, label="", lc=:lightgrey)
+    for sp in 1:3
+        plot!(plt, [-100,100], [-100,100]; ls..., subplot=sp)
+    end
+    ls=(lw=2, lc=:black, label="", legend=:topleft)
+    lims = (minimum(vcat(tot_mh, tot_ab)), maximum(vcat(tot_mh, tot_ab)))
+    lims = (lims[1] - 0.1*abs(lims[1]), lims[2] + 0.1 * abs(lims[2]))
+    scatter!(plt, tot_ab, tot_mh; 
+        ls..., 
+        legend_title="Total", 
+        xlims=lims,
+        ylims=lims,
+        subplot=1,
+        series_annotations=text.("\n\n" .* example_structs, 8)
+    )
+    lims = (minimum(vcat(bb_mh, bb_ab)), maximum(vcat(bb_mh, bb_ab)))
+    lims = (lims[1] - 0.1*abs(lims[1]), lims[2] + 0.1 * abs(lims[2]))
+    scatter!(plt, bb_ab, bb_mh; 
+        ls..., 
+        legend_title="Backbone", 
+        xlims=lims,
+        ylims=lims,
+        subplot=2,
+        series_annotations=text.("\n\n" .* example_structs, 8)
+    )
+    lims = (minimum(vcat(sc_mh, sc_ab)), maximum(vcat(sc_ab, sc_mh)))
+    lims = (lims[1] - 0.1*abs(lims[1]), lims[2] + 0.1 * abs(lims[2]))
+    scatter!(plt, sc_ab, sc_mh; 
+        ls..., 
+        legend_title="Sidechain", 
+        xlims=lims,
+        ylims=lims,
+        subplot=3,
+        series_annotations=text.("\n\n" .* example_structs, 8)
+    )
+    plot!(plt, 
+        size=(1200,1200),
+        xlabel="Auton&Bolen",
+        ylabel=nothing,
+        aspect_ratio=1,
+        leftmargin=0.5Plots.Measures.cm
+    )
+    plot!(plt,
+        ylabel="Moeser&Horniek",
+        subplot=1
+    )
+    
+    ys =(maximum(vcat(tot_ab, sc_ab, bb_ab)) - minimum(vcat(tot_ab, sc_ab, bb_ab)))
+    groupedbar!(
+        string.(example_structs),
+        hcat(tot_ab, bb_ab, sc_ab); 
+        label=["Total" "BB" "SC"], 
+        #title="Contributions",
+        xlabel="Structure",
+        ylabel="m-value (Auton&Bolen) / (kcal/mol)",
+        subplot=4,
+        ylims=(
+            minimum(vcat(tot_ab, sc_ab, bb_ab, 0)) - 0.1*abs(ys), 
+            maximum(vcat(tot_ab, sc_ab, bb_ab, 0)) + 0.1*abs(ys)
+        ),
+    )
+
+    ys =(maximum(vcat(tot_mh, sc_mh, bb_mh)) - minimum(vcat(tot_mh, sc_mh, bb_mh)))
+    groupedbar!(
+        string.(example_structs),
+        hcat(tot_mh, bb_mh, sc_mh); 
+        label=["Total" "BB" "SC"], 
+        #title="Contributions",
+        xlabel="Structure",
+        ylabel="m-value (Moeser&Horinek) / (kcal/mol)",
+        subplot=5,
+        ylims=(
+            minimum(vcat(tot_mh, sc_mh, bb_mh, 0)) - 0.1*abs(ys), 
+            maximum(vcat(tot_mh, sc_mh, bb_mh, 0)) + 0.1*abs(ys)
+        ),
+    )
+
+    return plt
+end
 
 end

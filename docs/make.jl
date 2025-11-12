@@ -6,6 +6,7 @@ makedocs(
         "Introduction" => "index.md",
         "Auton & Bolen" => "autonbolen.md",
         "Moeser & Horinek" => "moeserhorinek.md",
+        "M&H vs A&B" => "mh_vs_ab.md",
         "References" => "references.md",
     ],
 )

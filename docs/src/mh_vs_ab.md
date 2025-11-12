@@ -1,4 +1,4 @@
-# Moeser & Horinek
+# Moeser & Horinek vs. Auton & Bolen
 
 ```@example mvalue
 import Pkg
@@ -8,9 +8,7 @@ using LAPM
 
 ## Urea
 
-Compute and compare predictions with the Moeser & Horinek model, for urea:
-
 ```@example mvalue
-plot_mvalue(MoeserHorinek, "urea")
+plot_MH_vs_AB("urea")
 ```
 
