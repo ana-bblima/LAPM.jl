@@ -1,8 +1,4 @@
-push!(LOAD_PATH, "../src/")
-import Pkg
-Pkg.add("Documenter")
 using Documenter
-import LAPM
 
 makedocs(
     sitename="LAPM.jl",
