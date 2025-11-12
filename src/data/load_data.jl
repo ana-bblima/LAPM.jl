@@ -13,8 +13,8 @@
 #            same "clean" structure. 
 #
 const pdb_files = OrderedDict{String,String}(
-    "1MJC" => "./pdb/1MJC_clean.pdb",
-    "2RN2" => "./pdb/2RN2_clean.pdb",
+    "1MJC" => joinpath(@__DIR__, "pdb", "1MJC_clean.pdb"),
+    "2RN2" => joinpath(@__DIR__, "pdb", "2RN2_clean.pdb"),
 )
 
 #

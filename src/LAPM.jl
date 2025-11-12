@@ -21,17 +21,17 @@ data_dir = joinpath(@__DIR__, "data")
 # predict m-value using a model, for a specific structure
 #
 function predict_mvalue(
-    pdb::AbstractString; 
+    str::AbstractString;
     model::Type{<:PDBTools.MValueModel}=MoeserHorinek,
     cosolvent::String="urea",
     type::Int=2,
 )
-    atoms = read_pdb("$data_dir/pdb/$(pdb).pdb")
+    atoms = read_pdb(pdb_files[str])
     m = mvalue_delta_sasa(;
         model=model,
         cosolvent=cosolvent,
         atoms=atoms,
-        sasas=sasa_server[pdb],
+        sasas=sasa_server[str],
         type=type,
     )
     return (tot = m.tot, bb = m.bb, sc = m.sc)
