@@ -32,7 +32,8 @@ function predict_mvalue(
         model=model,
         cosolvent=cosolvent,
         atoms=atoms,
-        sasas=sasa_server[str],
+#        sasas=sasa_server[str],
+        sasas=creamer_sasa_restype(atoms),
         type=type,
     )
     return (tot = m.tot, bb = m.bb, sc = m.sc)
@@ -180,6 +181,7 @@ const mvalues_moeser_horinek = OrderedDict{String,Dict}()
 
 # Input data for examples
 include("./data/load_data.jl")
+include("./data/sasa_auton_bolen_server/creamer.jl")
 
 function plot_MH_vs_AB(cosolvent::String="urea")
     cosolvent = lowercase(cosolvent)
