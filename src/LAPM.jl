@@ -60,7 +60,7 @@ function plot_mvalue(model::Type{<:PDBTools.MValueModel}=MoeserHorinek, cosolven
     end
 
     l = @layout [a b c; d]
-    plt = plot(layout=l, framestyle=:box)
+    plt = plot(layout=l, framestyle=:box, fontfamily="Computer Modern")
     ls=(lw=2, ls=:dash, label="", lc=:lightgrey)
     for sp in 1:3
         plot!(plt, [-100,100], [-100,100]; ls..., subplot=sp)
@@ -200,7 +200,7 @@ function plot_MH_vs_AB(cosolvent::String="urea")
     end
 
     l = @layout [a b c; d; e]
-    plt = plot(layout=l, framestyle=:box)
+    plt = plot(layout=l, framestyle=:box, fontfamily="Computer Modern")
     ls=(lw=2, ls=:dash, label="", lc=:lightgrey)
     for sp in 1:3
         plot!(plt, [-100,100], [-100,100]; ls..., subplot=sp)
@@ -261,6 +261,7 @@ function plot_MH_vs_AB(cosolvent::String="urea")
             minimum(vcat(tot_ab, sc_ab, bb_ab, 0)) - 0.1*abs(ys), 
             maximum(vcat(tot_ab, sc_ab, bb_ab, 0)) + 0.1*abs(ys)
         ),
+        fontfamily="Computer Modern",
     )
 
     ys =(maximum(vcat(tot_mh, sc_mh, bb_mh)) - minimum(vcat(tot_mh, sc_mh, bb_mh)))
@@ -276,6 +277,7 @@ function plot_MH_vs_AB(cosolvent::String="urea")
             minimum(vcat(tot_mh, sc_mh, bb_mh, 0)) - 0.1*abs(ys), 
             maximum(vcat(tot_mh, sc_mh, bb_mh, 0)) + 0.1*abs(ys)
         ),
+        fontfamily="Computer Modern",
     )
 
     return plt
