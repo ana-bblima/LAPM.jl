@@ -198,7 +198,7 @@ function _series_annotations!(plt, subplot, lims, x, y, labels)
     for (ix, s) in enumerate(labels)
         i = x_inds[ix]
         sx, sy = i%2 == 1 ? (-0.06*w, 0.03*w) : (0.06*w, -0.03*w)
-        annotate!(plt, (x[i] + sx, y[i] + sy, text(s, 8)); subplot=subplot)
+        annotate!(plt, (x[ix] + sx, y[ix] + sy, text(s, 8)); subplot=subplot)
     end
 end
 
