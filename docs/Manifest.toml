@@ -726,7 +726,7 @@ version = "3.100.3+0"
 
 [[deps.LAPM]]
 deps = ["MolSimToolkit", "OrderedCollections", "PDBTools", "Plots", "StatsPlots"]
-path = "/home/leandro/.julia/dev/LAPM"
+path = ".."
 uuid = "900d2f21-6802-4fdd-aec4-3593e8a631ba"
 version = "1.0.0-DEV"
 
