@@ -1,3 +1,15 @@
+mvalues_moeser_horinek["1F2F"] = OrderedDict(
+    "tmao"      => (tot=NaN, bb=NaN, sc=NaN),
+    "sarcosine" => (tot=NaN, bb=NaN, sc=NaN),
+    "betaine"   => (tot=NaN, bb=NaN, sc=NaN), 
+    "proline"   => (tot=NaN, bb=NaN, sc=NaN), 
+    "glycerol"  => (tot=NaN, bb=NaN, sc=NaN), 
+    "sorbitol"  => (tot=NaN, bb=NaN, sc=NaN), 
+    "sucrose"   => (tot=NaN, bb=NaN, sc=NaN), 
+    "trehalose" => (tot=NaN, bb=NaN, sc=NaN), 
+    "urea"      => (tot=-1.567, bb=-0.708, sc=-0.910), 
+)
+
 mvalues_auton_bolen["1F2F"] = parse_mvalue_server("""
 Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpYnSaOj.
                     Native State (cal/mol/M)                                                     Denatured State (cal/mol/M)

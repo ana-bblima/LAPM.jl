@@ -1,10 +1,10 @@
-/var/www/html/mvalue/bin/TMO /tmp/phpmZHuBs
+/var/www/html/mvalue/bin/TMO /tmp/phpKUA6DK
 Array
-/tmp/mval_8eNIg2
+/tmp/mval_T9gxvK
 20244
-Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phpmZHuBs 
+Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phpKUA6DK 
 
-Protein Molecular Weight of /tmp/phpmZHuBs = 9824.98 g/mol. 
+Protein Molecular Weight of /tmp/phpKUA6DK = 9824.98 g/mol. 
 
 Key References for these calculations are located at the end of this file. 
 
@@ -15,7 +15,7 @@ Values in [ ] represent the Upper Bound Denatured State Accessiblity.
 Values without parentheses or brackets represent the Average Denatured State Accessiblity. 
 
 
-Calculated m-values for /tmp/phpmZHuBs.  
+Calculated m-values for /tmp/phpKUA6DK.  
  		 Native <-> Denatured  
 Osmolyte 	 m-value (cal/mol/M)  
 1M TMAO      	 (   179)   1346 [  2512] 
@@ -29,7 +29,7 @@ Osmolyte 	 m-value (cal/mol/M)
 1M Urea      	 (  -213)   -725 [ -1237] 
 
 
-Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpmZHuBs. 
+Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpKUA6DK. 
 		    Native State (cal/mol/M) 							 Denatured State (cal/mol/M) 
 Osmolyte 	 Backbone   Sidechains    Total 	 | 		 Backbone 			 Sidechains 			 Total 
 1M TMAO            2645       -1531        1113 	 | 	 (  3699)   5068 [  6438] 	 ( -2406)  -2609 [ -2812] 	 (  1293)   2459 [  3626] 
@@ -303,4 +303,3 @@ Key References Pertinent to these Calculations:
 10. Creamer, T. P., Srinivasan, R. & Rose, G. D. Modeling unfolded states of peptides and proteins. Biochemistry 34, 16245-16250 (1995). 
 11. Lee, B. & Richards, F. M. The interpretation of protein structures: estimation of static accessibility. J Mol Biol 55, 379-400 (1971). 
 12. Nozaki, Y. & Tanford, C. The Solubility of Amino Acids and Related Compounds in Aqueous Urea Solutions. J Biol Chem 238, 4074-4081 (1963). 
-

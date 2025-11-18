@@ -1,10 +1,10 @@
-/var/www/html/mvalue/bin/TMO /tmp/phpouSv3A
+/var/www/html/mvalue/bin/TMO /tmp/phpjNG6mc
 Array
-/tmp/mval_RVvDON
+/tmp/mval_0eUrVd
 20264
-Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phpouSv3A 
+Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phpjNG6mc 
 
-Protein Molecular Weight of /tmp/phpouSv3A = 11705.44 g/mol. 
+Protein Molecular Weight of /tmp/phpjNG6mc = 11705.44 g/mol. 
 
 Key References for these calculations are located at the end of this file. 
 
@@ -15,7 +15,7 @@ Values in [ ] represent the Upper Bound Denatured State Accessiblity.
 Values without parentheses or brackets represent the Average Denatured State Accessiblity. 
 
 
-Calculated m-values for /tmp/phpouSv3A.  
+Calculated m-values for /tmp/phpjNG6mc.  
  		 Native <-> Denatured  
 Osmolyte 	 m-value (cal/mol/M)  
 1M TMAO      	 (  1063)   2534 [  4004] 
@@ -29,7 +29,7 @@ Osmolyte 	 m-value (cal/mol/M)
 1M Urea      	 (  -917)  -1595 [ -2273] 
 
 
-Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpouSv3A. 
+Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpjNG6mc. 
 		    Native State (cal/mol/M) 							 Denatured State (cal/mol/M) 
 Osmolyte 	 Backbone   Sidechains    Total 	 | 		 Backbone 			 Sidechains 			 Total 
 1M TMAO            2272       -1882         391 	 | 	 (  4453)   6137 [  7821] 	 ( -2999)  -3213 [ -3426] 	 (  1454)   2924 [  4395] 

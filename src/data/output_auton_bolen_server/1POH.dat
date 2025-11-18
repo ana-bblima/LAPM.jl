@@ -1,10 +1,10 @@
-/var/www/html/mvalue/bin/TMO /tmp/phpYU5UJU
+/var/www/html/mvalue/bin/TMO /tmp/phphH86ar
 Array
-/tmp/mval_V0NE2e
+/tmp/mval_kZJCg2
 20244
-Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phpYU5UJU 
+Osmolyte-Induced Protein Folding/Unfolding Energetics Prediction for /tmp/phphH86ar 
 
-Protein Molecular Weight of /tmp/phpYU5UJU = 9121.28 g/mol. 
+Protein Molecular Weight of /tmp/phphH86ar = 9121.28 g/mol. 
 
 Key References for these calculations are located at the end of this file. 
 
@@ -15,7 +15,7 @@ Values in [ ] represent the Upper Bound Denatured State Accessiblity.
 Values without parentheses or brackets represent the Average Denatured State Accessiblity. 
 
 
-Calculated m-values for /tmp/phpYU5UJU.  
+Calculated m-values for /tmp/phphH86ar.  
  		 Native <-> Denatured  
 Osmolyte 	 m-value (cal/mol/M)  
 1M TMAO      	 (  1223)   2453 [  3683] 
@@ -29,7 +29,7 @@ Osmolyte 	 m-value (cal/mol/M)
 1M Urea      	 (  -635)  -1170 [ -1707] 
 
 
-Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phpYU5UJU. 
+Native and Denatured State Transfer Free Energy Contributions to the m-value for /tmp/phphH86ar. 
 		    Native State (cal/mol/M) 							 Denatured State (cal/mol/M) 
 Osmolyte 	 Backbone   Sidechains    Total 	 | 		 Backbone 			 Sidechains 			 Total 
 1M TMAO            1833        -856         977 	 | 	 (  3595)   4944 [  6294] 	 ( -1394)  -1514 [ -1634] 	 (  2200)   3430 [  4660] 
@@ -302,5 +302,3 @@ Key References Pertinent to these Calculations:
 9.  Creamer, T. P., Srinivasan, R. & Rose, G. D. Modeling unfolded states of proteins and peptides. II. Backbone solvent accessibility. Biochemistry 36, 2832-2835 (1997). 
 10. Creamer, T. P., Srinivasan, R. & Rose, G. D. Modeling unfolded states of peptides and proteins. Biochemistry 34, 16245-16250 (1995). 
 11. Lee, B. & Richards, F. M. The interpretation of protein structures: estimation of static accessibility. J Mol Biol 55, 379-400 (1971). 
-12. Nozaki, Y. & Tanford, C. The Solubility of Amino Acids and Related Compounds in Aqueous Urea Solutions. J Biol Chem 238, 4074-4081 (1963). 
-
