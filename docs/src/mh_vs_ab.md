@@ -11,11 +11,11 @@ using LAPM
 ### Using the A&B server SASAs
 
 ```@example mvalue
-plot_MH_vs_AB("urea"; sasa_from=LAPM.server_sasa)
+plot_MH_vs_AB("urea"; sasas_from=LAPM.server_sasa)
 ```
 
 ### Using the creamer SASAs
 
 ```@example mvalue
-plot_MH_vs_AB("urea"; sasa_from=LAPM.creamer_sasa)
+plot_MH_vs_AB("urea"; sasas_from=LAPM.creamer_sasa)
 ```
