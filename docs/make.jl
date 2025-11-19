@@ -8,6 +8,7 @@ makedocs(
         "Auton & Bolen (Server)" => "autonbolen2.md",
         "Moeser & Horinek" => "moeserhorinek.md",
         "M&H vs A&B" => "mh_vs_ab.md",
+        "Experimental" => "experimental.md",
         "References" => "references.md",
     ],
 )

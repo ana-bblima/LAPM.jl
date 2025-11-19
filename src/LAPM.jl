@@ -15,6 +15,7 @@ using PDBTools:
 export MoeserHorinek, AutonBolen
 export plot_mvalue
 export plot_MH_vs_AB
+export plot_experimental
 
 data_dir = joinpath(@__DIR__, "data")
 
@@ -270,6 +271,33 @@ function plot_MH_vs_AB(cosolvent::String="urea"; sasas_from=server_sasa)
         bottommargin=0.5Plots.Measures.cm,
     )
 
+    return plt
+end
+
+function plot_experimental(
+    model::Type{<:PDBTools.MValueModel}=MoeserHorinek,
+    cosolvent="urea";
+    sasas_from::Function=creamer_sasa
+)
+    cosolvent = lowercase(cosolvent)
+    example_structs = keys(sasa_server)
+    nexamples = length(example_structs)
+    tot_pred = zeros(nexamples)
+    tot_exp = zeros(nexamples)
+    for (i, str) in enumerate(example_structs)
+        p = predict_mvalue(str; cosolvent, model, sasas_from)
+        tot_pred[i] = p.tot
+        tot_exp[i] = mvalues_experimental[str][cosolvent]
+    end
+    plt = plot(framestyle=:box, fontfamily="Computer Modern")
+    ls = (lw=2, ls=:dash, label="", lc=:lightgrey)
+    plot!(plt, [-100, 100], [-100, 100]; ls...)
+    _scatter!(plt, tot_exp, tot_pred, example_structs; legend_title="", subplot=1)
+    ylab(::Type{MoeserHorinek}) = "Moeser&Horinek"
+    ylab(::Type{AutonBolen}) = "Auton&Bolen"
+    plot!(plt, xlabel="Experimental")
+    plot!(plt, ylabel="LAPM prediction ($(ylab(model)))")
+    plot!(plt, size=(400,400))
     return plt
 end
 
