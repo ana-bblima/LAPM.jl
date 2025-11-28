@@ -17,6 +17,8 @@ function creamer_atom_type(at)
     element(at) == "N" && return "N_SC"
     element(at) == "O" && return "O_SC"
     element(at) == "S" && return "S_SC"
+    @warn "Could not find type for $(name(at)) - returning C_SC"
+    return "C_SC"
 end
 
 const creamer_sasas = Dict{
