@@ -55,7 +55,7 @@ function creamer_sasa_restype(atoms::AbstractVector{<:PDBTools.Atom})
     sasas = Dict{String,Dict}()
     sasa_atoms = sasa_particles(atoms;
         atom_type = creamer_atom_type,
-        atom_radius_from_type = type -> creamer_atomic_radii(type)
+        atom_radius_from_type = type -> creamer_atomic_radii[type],
     )
     sel_bb = _Selector(isbackbone, Ref(first(eachresidue(atoms))))
     sel_sc = _Selector(issidechain, Ref(first(eachresidue(atoms))))
