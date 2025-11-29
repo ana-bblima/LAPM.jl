@@ -6,6 +6,7 @@ const creamer_atomic_radii = Dict{String, Float32}(
   "N_BB" => 1.76601,
   "N_SC" => 1.38848,
   "C_SC" => 1.88785,
+  "H" => 0.0,
 )
 
 function creamer_atom_type(at)
@@ -17,6 +18,7 @@ function creamer_atom_type(at)
     element(at) == "N" && return "N_SC"
     element(at) == "O" && return "O_SC"
     element(at) == "S" && return "S_SC"
+    element(at) == "H" && return "H"
     @warn "Could not find type for $(name(at)) - returning C_SC"
     return "C_SC"
 end
