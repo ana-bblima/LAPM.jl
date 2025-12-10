@@ -4,6 +4,7 @@ version = "1.0.0-DEV"
 authors = ["lmiq <lmartine@unicamp.br> and contributors"]
 
 [deps]
+EasyFit = "fde71243-0cda-4261-b7c7-4845bd106b21"
 MolSimToolkit = "054db54f-6694-444d-9bbb-e9ecdbfe77be"
 OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
 PDBTools = "e29189f1-7114-4dbd-93d0-c5673a921a58"
@@ -11,6 +12,7 @@ Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
 
 [compat]
+EasyFit = "0.7.3"
 MolSimToolkit = "1.31.1"
 OrderedCollections = "1.8.1"
 PDBTools = "3.11.3"
