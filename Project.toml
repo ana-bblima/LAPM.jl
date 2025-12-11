@@ -26,7 +26,7 @@ OrderedCollections = "1.8.1"
 PDBTools = "3.16.1"
 Plots = "1.41.1"
 ProgressMeter = "1.11.0"
-Statistics = "1.11.1"
+Statistics = "1"
 StatsPlots = "0.15.8"
 julia = "1.10"
 

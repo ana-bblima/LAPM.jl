@@ -32,4 +32,3 @@ LAPM.plot_mvalue_ua()
 ```
 
 
-
