@@ -12,7 +12,7 @@
 
 ### For a single structure:
 
-```@example creamer_ua
+```@example creamerua
 using LAPM
 using PDBTools
 pdb = read_pdb(LAPM.pdb_files["1AO3"], "protein and not element H")
@@ -21,13 +21,13 @@ LAPM.mvalue_ua(pdb)
 
 ### All results vs. experimental values
 
-```@example creamer_ua
+```@example creamerua
 LAPM.plot_ua()
 ```
 
 ### All results vs. other models
 
-```@example creamer_ua
+```@example creamerua
 LAPM.plot_mvalue_ua()
 ```
 

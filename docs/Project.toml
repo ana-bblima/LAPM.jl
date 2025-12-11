@@ -5,4 +5,4 @@ LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
 PDBTools = "e29189f1-7114-4dbd-93d0-c5673a921a58"
 
 [sources]
-LAPM = {path = "/home/leandro/.julia/dev/LAPM"}
+LAPM = {path = ".."}
