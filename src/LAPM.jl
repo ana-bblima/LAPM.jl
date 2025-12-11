@@ -21,7 +21,7 @@ export plot_experimental
 
 data_dir = joinpath(@__DIR__, "data")
 
-creamer_sasa(_, atoms) = creamer_sasa_restype(atoms)
+
 server_sasa(str::String, _) = sasa_server[str]
 #
 # predict m-value using a model, for a specific structure
@@ -307,6 +307,7 @@ function plot_experimental(
 #    return fit
 end
 
-include("creamer_per_atom.jl")
+include("./per_atom_type/get_sasa_per_type.jl")
+include("./per_atom_type/creamer_per_atom.jl")
 
 end
