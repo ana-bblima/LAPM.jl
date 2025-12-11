@@ -16,7 +16,7 @@
 using LAPM
 using PDBTools
 pdb = read_pdb(LAPM.pdb_files["1AO3"], "protein and not element H")
-mvalue_ua(pdb)
+LAPM.mvalue_ua(pdb)
 ```
 
 ### All results vs. experimental values
